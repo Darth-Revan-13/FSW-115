@@ -1,23 +1,12 @@
-const createNode = (elem) => {
-    return document.createElement(elem);
-};
-
-const appendNode = (parent, elem) => {
-    parent.appendChild(elem);
-};
-
-fetch(get, "https://api.vschool.io/alexhilbert/todo/")
+fetch("https://api.vschool.io/alexhilbert/todo/", {
+    method: 'get'
+})
     .then(res => res.json())
-    .then(data => {
-        data.map((todo) => {
-            let li = createNode("li");
-                span = createNode("span");
-            span.innerText = todo.description;
-            appendNode(ul, li);
-            appendNode(li, span);
-        });
-    }).catch(err => {
-        console.error("Error: ", err);
-    });
-// fetch('https://api.vschool.io/alexhilbert/todo/')
-    
+    .then(res => list.innerHTML = listOfItems(res))
+    .catch(err => console.log(err))
+
+const listOfItems = (todo) => {
+    console.log(todo);
+    const items = todo.map(todo => '<li>' + todo.description + '</li>').join("\n");
+    return '<ul>' + items + '</ul>';
+}
