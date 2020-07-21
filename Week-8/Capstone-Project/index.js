@@ -11,6 +11,19 @@ const listOfItems = (todo) => {
     const items = todo.map(todo => '<li>' + todo.description + "<input type=checkbox id=update>" + "<button id=remove>Send to Black Hole</button>" + '</li>').join("\n");
     return '<ul>' + items + '</ul>';
 }
+
+fetch("https://rickandmortyapi.com/api/character", {
+    method: 'get'
+})
+    .then(res => res.json())
+    .then(res => list.innerHTML = listOfItems(res))
+    .catch(err => console.log(err))
+
+const listOfItems = (character) => {
+    console.log(character);
+    const items = character.map(character => '<li>' + character.name + "<input type=checkbox id=update>" + "<button id=remove>Send to Black Hole</button>" + '</li>').join("\n");
+    return '<ul>' + items + '</ul>';
+}
 //post
 const todoForm = document.todoForm;
 todoForm.addEventListener("submit", function(event) {

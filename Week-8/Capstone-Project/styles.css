@@ -1,0 +1,74 @@
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: black;
+    }
+    #top {
+        background-image: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(download.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 576px;
+        color: white;
+        background-color: black;
+    }
+    footer {
+        background-image: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(Emperor-Rise-of-Skywalker-913-2.jpg);
+        background-position: center;
+        height: 420px;
+        color: white;
+        background-color: black;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: black;
+    }
+    #top {
+        background-image: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(download.jpg), url(434341_brotherhood-of-steel-needs-you-makes-great-wallpapers-fallout_600x699_h.jpg);
+        background-position: right, left;
+        background-repeat: no-repeat, no-repeat;
+        height: 699px;
+        color: white;
+        background-color: black;
+    }
+    #img {
+        background-image: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(Fo4_Liberty_Prime.jpg);
+        background-position: center;
+        height: 1080px;
+        color: white;
+        background-color: black;
+    }
+    footer {
+        background-image: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(Emperor-Rise-of-Skywalker-913-2.jpg);
+        background-position: center;
+        height: 420px;
+        color: white;
+        background-color: black;
+    }
+}
